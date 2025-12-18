@@ -1,0 +1,45 @@
+================================================================================
+TESLİM HAZIRLIK KONTROL LİSTESİ
+================================================================================
+
+YAPILMASI GEREKENLER:
+---------------------
+
+1. TEMIZLE.bat dosyasını çalıştırın
+   - Bu script otomatik olarak:
+     * EXE'yi ana dizine kopyalar
+     * PDF'i os-scheduler klasörüne kopyalar
+     * build/ ve dist/ klasörlerini siler
+     * __pycache__ klasörlerini temizler
+
+2. Manuel Kontroller:
+   ✓ ProcessScheduler.exe ana dizinde olmalı
+   ✓ CS305_Report_MelekArslan_220446018.pdf os-scheduler klasöründe olmalı
+   ✓ build/ ve dist/ klasörleri silinmiş olmalı
+   ✓ __pycache__ klasörleri temizlenmiş olmalı
+
+3. Son Kontrol:
+   - os-scheduler/ klasöründe şunlar olmalı:
+     * ProcessScheduler.exe
+     * CS305_Report_MelekArslan_220446018.pdf
+     * main.py
+     * scheduler.py
+     * processes.txt
+     * README.txt
+     * TESLIM_NOTLARI.txt
+     * algorithms/ (klasör)
+     * utils/ (klasör)
+     * gui/ (klasör)
+
+   - Şunlar OLMAMALI:
+     * build/ klasörü
+     * dist/ klasörü
+     * __pycache__ klasörleri
+     * .spec, .bat dosyaları (TEMIZLE.bat hariç)
+
+================================================================================
+
+NOT: TEMIZLE.bat çalıştırıldıktan sonra bu dosyayı da silebilirsiniz.
+
+================================================================================
+

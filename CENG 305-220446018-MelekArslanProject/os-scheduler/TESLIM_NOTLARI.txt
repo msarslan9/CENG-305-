@@ -1,0 +1,63 @@
+================================================================================
+CS 305 - OPERATING SYSTEMS PROJESİ
+TESLİM DOSYALARI
+Öğrenci: Melek Arslan
+Öğrenci No: 220446018
+================================================================================
+
+TESLİM İÇERİĞİ:
+---------------
+
+1. ProcessScheduler.exe
+   - Ana GUI uygulaması
+   - Bağımsız çalışır (Python gerekmez)
+   - Çift tıklayarak çalıştırılabilir
+
+2. Kod Dosyaları (Modüler Yapı):
+   - algorithms/     : Scheduling algoritmaları (FCFS, SJF, RR, Priority)
+   - utils/          : Yardımcı fonksiyonlar
+   - gui/            : GUI bileşenleri
+   - main.py         : GUI giriş noktası
+   - scheduler.py    : Komut satırı arayüzü
+
+3. processes.txt
+   - Örnek input dosyası
+   - Format: process_id, arrival_time, burst_time, priority
+
+4. README.txt
+   - Kullanım kılavuzu
+   - Proje açıklaması
+
+5. CS305_Report_MelekArslan_220446018.pdf
+   - Detaylı proje raporu
+   - (Üst klasörde bulunmaktadır)
+
+================================================================================
+
+KULLANIM:
+---------
+
+GUI Uygulaması:
+1. ProcessScheduler.exe dosyasını çift tıklayın
+2. "Load Input File" ile processes.txt dosyasını seçin
+3. Quantum ve Speed ayarlarını yapın
+4. "Run Simulation" ile simülasyonu başlatın
+5. Sonuçları sekmelerde inceleyin
+6. PDF veya CSV olarak export edebilirsiniz
+
+Komut Satırı:
+python scheduler.py processes.txt [time_quantum]
+
+================================================================================
+
+ÖZELLİKLER:
+-----------
+✓ 4 farklı scheduling algoritması
+✓ Gantt chart görselleştirmesi
+✓ Detaylı metrikler (Turnaround, Waiting, CPU Utilization)
+✓ Karşılaştırmalı analiz grafikleri
+✓ PDF ve CSV export
+✓ Modern ve kullanıcı dostu arayüz
+
+================================================================================
+

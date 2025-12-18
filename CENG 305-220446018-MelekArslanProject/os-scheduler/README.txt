@@ -1,63 +1,83 @@
-========================================================================
-CS 305 - OPERATING SYSTEMS PROJECT
-Process Scheduling Simulator (Grand Final Edition)
+================================================================================
+CS 305 - Operating Systems
+Process Scheduling Simulator
 Student: Melek Arslan
-ID: 220446018
-Date: 17.12.2025
-========================================================================
+Student ID: 220446018
+================================================================================
 
-PROJECT OVERVIEW
+PROJE AÇIKLAMASI:
 -----------------
-This project implements a CPU Scheduling Simulator with a "Future Tech" GUI. 
-It simulates FCFS, SJF (Non-preemptive), Round Robin, and Priority algorithms.
-Beyond standard simulation, it features advanced data analytics, scatter plots, 
-and automated performance evaluation.
+Bu proje, işletim sistemlerinde kullanılan process scheduling algoritmalarını
+simüle eden bir uygulamadır. FCFS, SJF, Round Robin ve Priority Scheduling
+algoritmalarını görselleştirir ve karşılaştırır.
 
-KEY FEATURES
-------------
-1. Algorithms: FCFS, SJF, Round Robin, Priority.
-2. Analytics Dashboard: 
-   - Grouped Bar Charts (Waiting vs Turnaround).
-   - Scatter Plot (Burst Time vs Waiting Time correlation analysis).
-3. Smart Analysis: Automatically detects and reports the most efficient algorithm.
-4. Export Options: 
-   - CSV (Excel) Export.
-   - PDF Report Generation (Requires 'fpdf' library).
-5. Visuals: Live Gantt Chart, CPU Gauge, System Load Monitor, and Matrix-style boot sequence.
+KULLANIM:
+---------
 
-INSTALLATION & REQUIREMENTS
----------------------------
-The project uses standard Python libraries + 'tkinter'.
-**OPTIONAL:** For PDF export functionality, please install 'fpdf':
+1. GUI UYGULAMASI (Önerilen):
+   - ProcessScheduler.exe dosyasını çift tıklayarak çalıştırın
+   - "Load Input File" butonuna tıklayıp processes.txt dosyasını seçin
+   - Quantum ve Speed ayarlarını yapın
+   - "Run Simulation" butonuna tıklayın
+   - Sonuçları sekmelerde inceleyin
+   - PDF veya CSV olarak export edebilirsiniz
 
-   pip install fpdf
+2. KOMUT SATIRI:
+   - Python yüklü olmalı
+   - Terminal'de: python scheduler.py processes.txt [time_quantum]
+   - Örnek: python scheduler.py processes.txt 3
 
-(Note: If fpdf is not installed, the system will automatically fallback to .txt export mode. The simulation will still work perfectly.)
+DOSYA YAPISI:
+-------------
+os-scheduler/
+├── ProcessScheduler.exe    # Ana uygulama (GUI)
+├── scheduler.py             # Komut satırı arayüzü
+├── main.py                  # GUI giriş noktası
+├── processes.txt            # Örnek input dosyası
+│
+├── algorithms/              # Scheduling algoritmaları
+│   ├── fcfs.py              # First-Come First-Served
+│   ├── sjf.py               # Shortest Job First
+│   ├── round_robin.py       # Round Robin
+│   └── priority.py          # Priority Scheduling
+│
+├── utils/                   # Yardımcı fonksiyonlar
+│   ├── file_parser.py       # Dosya okuma
+│   ├── formatters.py        # Formatlama
+│   └── calculations.py      # Hesaplamalar
+│
+└── gui/                     # GUI bileşenleri
+    ├── app.py               # Ana uygulama
+    ├── components.py        # UI bileşenleri
+    └── visualizations.py    # Görselleştirmeler
 
-HOW TO RUN
-----------
-1. Open terminal in the project folder.
-2. Run the GUI version (Recommended):
-   
-   python scheduler_gui.py
+INPUT DOSYASI FORMATI:
+----------------------
+process_id, arrival_time, burst_time, priority
 
-3. (Optional) Run the CLI version:
-   
-   python scheduler.py processes.txt
+Örnek:
+P1, 0, 5, 3
+P2, 1, 3, 1
+P3, 2, 8, 2
 
-USAGE GUIDE
+ÖZELLİKLER:
 -----------
-- Click " Load Input File" to select 'processes.txt'.
-- Adjust "Quantum" and "Speed" sliders as needed.
-- Click " Run Simulation" to start the visualization.
-- Check the "Analytics" tab for charts and the "Help" button for a user manual.
+- 4 farklı scheduling algoritması (FCFS, SJF, RR, Priority)
+- Gantt chart görselleştirmesi
+- Detaylı metrikler (Turnaround Time, Waiting Time, CPU Utilization)
+- Karşılaştırmalı analiz grafikleri
+- PDF ve CSV export
+- Modern ve kullanıcı dostu arayüz
 
-FILES INCLUDED
---------------
-- scheduler_gui.py (Main Application)
-- scheduler.py (Command Line Version)
-- processes.txt (Sample Input)
-- CS305_Report_MelekArslan.pdf (Project Report)
-- README.txt (This file)
+GEREKSINIMLER (Komut satırı için):
+----------------------------------
+- Python 3.x
+- tkinter (genellikle Python ile birlikte gelir)
 
-========================================================================
+NOTLAR:
+-------
+- EXE dosyası bağımsız çalışır, Python yüklü olmasına gerek yoktur
+- processes.txt dosyası örnek input dosyasıdır
+- Tüm algoritmalar ödev gereksinimlerine uygun şekilde implement edilmiştir
+
+================================================================================
